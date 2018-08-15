@@ -68,17 +68,17 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <img src="{{ URL::to('/') }}/img/logo.jpg" style="width:40%; height: 40%" />
-                <div class="title m-b-md">
+                {{--<div class="title m-b-md">
                     Isaac Lopez Integrated School
-                </div>
+                </div>--}}
 
                 <div class="links">
                     @if (Route::has('login'))
                         @auth
                             <a href="{{ url('/home') }}">Home</a>
                         @else
-                            <a href="{{ route('login') }}">Login</a>
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('login') }}" style="font-size: 24px;">Login</a>
+                            <a href="{{ route('register') }}" style="font-size: 24px;">Register</a>
                         @endauth
                     @endif
                 </div>
